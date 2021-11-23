@@ -1,0 +1,91 @@
+p{text-align:center;}
+h1{text-align:center;}
+.underline_title{text-decoration:underline;}
+.Header_Title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+}
+
+.Sub_Header{
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 162, 255);
+    border-radius: 10px;
+    width: 50%;
+    margin-left : 25%;
+    font-size: 20px;
+}
+
+input[type=password] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 162, 255);
+    border-radius: 10px;
+    width: 50%;
+    margin-left : 25%;
+    font-size: 20px;
+}
+
+input[type=submit] {
+    width: 50%;
+    margin-left : 25%;
+    font-size: 15px;
+    background-color: #ffffff;
+    border: 5px solid rgb(255, 0, 0);
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.LeftAlign{text-align:left;}
+
+.Centre {text-align: center;}
+
+.slide{color: black;
+text-shadow: 1px 1px 2px red;
+;}
+
+.modal-backdrop {
+    background-color: rgba(0,0,0,.0001) !important;
+}
+
+table{width: 100%;}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.jumbotron{
+    background-color: rgb(231, 101, 101);
+    margin-bottom: 0%;
+}
+
+#right{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+body{
+    font-family: 'Courier New', monospace;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+}
+
+.bigPara{font-size: 20px;}
+
+
+
+
+
+
+

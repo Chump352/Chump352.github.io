@@ -1,15 +1,11 @@
-<?php
-    ob_start();
-    session_start();
-    
-?>
+
 <!doctype html>
 
 <html lang="en">
 <head>
 
     
-    <title>Pingu's World</title>
+    <title>Welcome</title>
     <metacharset="utf-8">
     <metaname="viewport"content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -23,27 +19,6 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="GDPR-banner.css">
-
-    <script async src="GDPR-banner.js"></script>
-
-    <!--display GDPR  -->
-
-    <div class="GDPR alert alert-dark text-center mb-0 rounded-0" role="alert">
-
-
-        <?php
-
-            include 'GDPR.php';
-        ?>
-        
-        <button type="button" class="btn btn-primary btn-lg ml-3" onclick="window.hideGDPR()">
-
-        I Consent
-
-        </button>
-
-    </div>
 
 </head>
 
@@ -53,21 +28,10 @@
     <div class="jumbotron rounded-0">
         <div class="container text-center">
           <h1 class="Header_Title">ONLINE MERCH STORE</h1>
-          <?php
-                if(isset($_SESSION['username'])){
-                    echo "<h2>User: " . $_SESSION['username'] . "</h2>";
-                }
-                else
-                {
-                    echo "<h2>Welcome</h2>";
-                }
-            ?>  
+          
         </div>
     </div>
 
-    <?php
-            include 'NavBar.php';
-    ?>
 
       <div class="container"><br>
         <div class="row">
@@ -113,9 +77,7 @@
         </div>
       </div><br>
 
-  <?php
-    include 'Footer.php';
-  ?>
+
     
 </body>
 
