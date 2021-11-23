@@ -1,8 +1,122 @@
-<!DOCTYPE html>
-<html>
+<?php
+    ob_start();
+    session_start();
+    
+?>
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    
+    <title>Pingu's World</title>
+    <metacharset="utf-8">
+    <metaname="viewport"content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="GDPR-banner.css">
+
+    <script async src="GDPR-banner.js"></script>
+
+    <!--display GDPR  -->
+
+    <div class="GDPR alert alert-dark text-center mb-0 rounded-0" role="alert">
+
+
+        <?php
+
+            include 'GDPR.php';
+        ?>
+        
+        <button type="button" class="btn btn-primary btn-lg ml-3" onclick="window.hideGDPR()">
+
+        I Consent
+
+        </button>
+
+    </div>
+
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <div class="jumbotron rounded-0">
+        <div class="container text-center">
+          <h1 class="Header_Title">ONLINE MERCH STORE</h1>
+          <?php
+                if(isset($_SESSION['username'])){
+                    echo "<h2>User: " . $_SESSION['username'] . "</h2>";
+                }
+                else
+                {
+                    echo "<h2>Welcome</h2>";
+                }
+            ?>  
+        </div>
+    </div>
+
+    <?php
+            include 'NavBar.php';
+    ?>
+
+      <div class="container"><br>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-body"><img src="Index Images/Hoodie.jpg" style="width:100%" alt="Image"></div><br>
+              <!--https://res.cloudinary.com/teepublic/image/private/s--OQDHzWd8--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840653:production:blanks:f6q1psnlmvhpoighmph1,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1508140736/production/designs/1975594_1.jpg-->
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="panel panel-primary bigPara">
+              Hoodies Info would go here 
+            </div>
+          </div>
+        </div><br>
+          
+        <div class="row">
+          <div class="col-sm-4"> 
+            <div class="panel panel-danger">
+              <div class="panel-body"><img src="Index Images/Tshirt.jpg"  style="width:100%" alt="Image"></div><br>
+              <!--https://res.cloudinary.com/teepublic/image/private/s--Ynok8P6r--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1560158060/production/designs/5032504_1.jpg-->
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="panel panel-primary bigPara">
+              Tshirts info would go here 
+            </div>
+          </div>
+        </div><br>
+
+        <div class="row">
+          <div class="col-sm-4"> 
+            <div class="panel panel-success">
+              <div class="panel-body"><img src="Index Images/Tshirt2.jpg"  style="width:100%" alt="Image"></div>
+              <!--https://ih1.redbubble.net/image.319227649.9275/ssrco,slim_fit_t_shirt,womens,fafafa:ca443f4786,front,square_product,600x600.u2.jpg-->
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="panel panel-primary bigPara">
+              Tshirts info would go here
+            </div>
+          </div>
+        </div>
+      </div><br>
+
+  <?php
+    include 'Footer.php';
+  ?>
+    
 </body>
 
 </html>
